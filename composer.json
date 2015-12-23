@@ -2,6 +2,7 @@
     "name": "pyataks/sinlgularpdo",
     "description": "PDO based classes to singular connections",
     "license" : "BSD",
+    "homepage": "https://github.com/pyataks/sinlgularpdo",
     "authors": [
         {
             "name": "pyatak_ss",
