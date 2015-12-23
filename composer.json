@@ -1,0 +1,11 @@
+{
+    "name": "pyataks/sinlgularpdo",
+    "description": "PDO based classes to singular connections",
+    "license" : "BSD",
+    "authors": [
+        {
+            "name": "pyatak_ss",
+            "email": "pyatak_ss@groupbwt.com"
+        }
+    ]
+}
