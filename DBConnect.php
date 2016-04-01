@@ -89,7 +89,7 @@ class DBConnect implements DBConnectionInterface
                 self::$connections[$dsn][$username]['dbh'] = new PDO($dsn, $username, $password, self::$options);
             } catch (\PDOException $e) {
                 self::$connections[$dsn][$username]['dbh'] = false;
-                file_put_contents('logs.log', $e->getTraceAsString() . "\n", FILE_APPEND);
+                throw $e;
             }
         }
 
@@ -111,7 +111,7 @@ class DBConnect implements DBConnectionInterface
             self::$connections[$dsn][$username]['dbh'] = new PDO($dsn, $username, $password, self::$options);
         } catch (\PDOException $e) {
             self::$connections[$dsn][$username]['dbh'] = [];
-            file_put_contents('logs.log', $e->getTraceAsString() . "\n", FILE_APPEND);
+            throw $e;
         }
 
         $this->currentDBh = self::$connections[$dsn][$username]['dbh'];
